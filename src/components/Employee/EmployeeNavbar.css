@@ -1,0 +1,160 @@
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.employee-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(231, 221, 221, 0.1);
+}
+
+.employee-navbar__logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.employee-navbar__logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-navbar__nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.employee-navbar__profile-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.employee-navbar__profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.employee-navbar__profile-dropdown {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  font-size: 25px;
+  border-radius: 5px;
+  box-shadow: 0 20px 10px rgba(235, 194, 194, 0.911);
+  z-index: 1000;
+  background-color: rgb(7, 10, 92);
+  padding: 10px;
+}
+
+.employee-navbar__profile-item {
+  padding: 25px;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  gap: 30px;
+}
+
+.employee-navbar__profile-item:hover {
+  color: rgb(35, 178, 245);
+  transform: scale(1.05);
+}
+
+.employee-navbar__icon {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.employee-navbar__dropdown-icon {
+  color: white;
+  font-size: 50px;
+  margin: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.employee-navbar__dropdown-label {
+  color: #ddd;
+  font-size: 25px;
+}
+
+.employee-navbar__ticket-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.employee-navbar__ticket-text {
+  display: flex;
+  align-items: center;
+}
+
+.employee-navbar__ticket-dropdown {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  font-size: 25px;
+  border-radius: 5px;
+  box-shadow: 0 20px 10px rgba(235, 194, 194, 0.911);
+  z-index: 1000;
+  background-color: rgb(7, 10, 92);
+  padding: 10px;
+}
+
+.employee-navbar__ticket-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-navbar__ticket-item {
+  padding: 25px;
+  margin-left: 10px;
+  margin-right: 20px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.employee-navbar__clock-in {
+  width: 50px; 
+  height: 50px;
+  cursor: pointer;
+  margin-right: 50px; 
+  margin-top: 8px;
+}
+
+.employee-navbar__clock-in-icon {
+  width: 100%;
+  height: 100%;
+}

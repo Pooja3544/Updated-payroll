@@ -1,0 +1,75 @@
+.applicant-tracking-container {
+    width: 50%;
+    margin-left: 25%;
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.877);
+    background: linear-gradient(50deg, #4f6857, #3714b6);
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Limits the height of the container */
+    animation: slide-in 1s ease-in-out;
+    position: relative;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+h2 {
+    margin-left: 300px;
+    text-align: center;
+    color: white;
+}
+
+.applicant-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.applicant-item {
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.applicant-item:hover {
+    transform: scale(1.02);
+}
+
+.applicant-item h3 {
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+.applicant-item p {
+    margin: 5px 0;
+    color: #777;
+}
+
+.back-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bpk-button {
+    margin-left: 40%;
+   width: 20%;
+    
+}
+
+.back-button:hover {
+    background-color: #555;
+}

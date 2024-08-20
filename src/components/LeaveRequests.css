@@ -1,0 +1,81 @@
+.leave-requests-container {
+  padding: 20px;
+  width: 700px;
+  margin-right: 500px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 400px;
+  background-color: white;
+  color: black;
+  overflow-y: auto;
+}
+
+.leave-requests-container::-webkit-scrollbar {
+  display: none;
+}
+
+.leave-requests-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.leave-requests-header {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #100c0c;
+}
+
+.leave-requests-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.leave-requests-table th,
+.leave-requests-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.leave-requests-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.leave-requests-table tr:hover {
+  transform: scale(1.01);
+  background-color: rgba(239, 234, 234, 0.902);
+}
+
+.leave-requests-action-button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.leave-requests-accept-button {
+  background-color: #4CAF50;
+  color: white;
+  width: 100px;
+}
+
+.leave-requests-accept-button:hover {
+  background-color: #45a049;
+}
+
+.leave-requests-reject-button {
+  background-color: #f44336;
+  color: white;
+  width: 100px;
+}
+
+.leave-requests-reject-button:hover {
+  background-color: #da190b;
+}

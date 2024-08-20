@@ -1,0 +1,113 @@
+
+
+.interview-scheduling-container {
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(7, 10, 92);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.938);
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 75vh; /* Limits the height of the container */
+    align-items: center;
+    margin-left: 100px;
+    
+}
+.show {
+    text-align: center;
+    margin-left: 0%;
+}
+
+.interview-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.interview-item {
+    width: 90%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: white;
+    margin-left: 4%;
+}
+
+.interview-item h3 {
+    color: black;
+    margin-top: 0;
+}
+
+.interview-item label {
+    color: black;
+    display: block;
+    margin: 5px 0;
+}
+
+.interview-item input {
+    color: black;
+    padding: 5px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.button-group {
+    display: flex;
+    gap: 70px; /* Gap between buttons */
+    margin-top: 10px;
+}
+
+.button-group .edit-btn {
+    width: fit-content; /* Width for Edit button */
+}
+
+.button-group .send-email-btn {
+    width: 200px; /* Width for Send Email Notification button */
+
+}
+
+.button-group button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.name{
+    color:black;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-containern {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 30%;
+    margin-left: 35%;
+   
+}
+
+.back-btnn {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.sav{
+    width: 10%;
+    margin-left: 45%;
+}

@@ -1,0 +1,177 @@
+/* Main settings box */
+.settings-box {
+  width: 40%; /* Set width to 50% */
+  margin-right: 650px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align content */
+  animation: fadeIn 0.5s; /* Fade-in animation */
+  color: white;
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Content alignment */
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
+  margin-top: 20px; /* Spacing above content */
+}
+
+.half-width {
+  width: 100%; /* Full width of the container */
+  padding: 10px;
+  animation: slideIn 0.3s ease forwards; /* Slide-in effect */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+      transform: translateX(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* Button styles */
+.settings-content button {
+  margin-left: 1%;
+  width: 70%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #dce1e7;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.settings-content button:hover {
+  background-color: #0056b3;
+}
+
+/* Section styles */
+.password-section,
+.history-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin-top: 10px;
+  width: 100%; /* Full width of the container */
+}
+
+/* Input and button styles */
+.password-section input,
+.search-bar {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.password-section button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.password-section button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Back button styles */
+.bk-button {
+  margin-left: 1%;
+  width: auto; /* Adjust width as needed */
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.ddk{
+  margin-left: 5%;
+}
+
+.bk-button:hover {
+  background-color: #0056b3;
+}
+
+/* Edit profile section styles */
+.edit-profile-section {
+  margin-left: 15%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.edit-profile-section input[type="text"],
+.edit-profile-section input[type="file"] {
+  margin-bottom: 10px;
+}
+
+.edit-profile-section img {
+  margin-top: 10px;
+  border-radius: 50%; /* Optional: Make the image circular */
+  transition: transform 0.3s; /* Image scale effect */
+}
+
+.edit-profile-section img:hover {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Responsive Styles */
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .settings-box {
+      width: 95%; /* Full width on smaller screens */
+  }
+
+  .settings-content button {
+      font-size: 14px; /* Smaller font on mobile */
+  }
+
+  .edit-profile-section img {
+      width: 80px; /* Smaller profile image on mobile */
+      height: 80px;
+  }
+}

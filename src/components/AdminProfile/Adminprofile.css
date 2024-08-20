@@ -1,0 +1,175 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.admin-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  width: 70%; /* 50% width */
+  margin: 10 auto; /* Center the profile container */
+  padding: 20px;
+ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.87);
+  margin-top: 20px;
+  max-height: 550px; /* Adjust the max height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  transition: transform 0.3s ease-in-out; /* Add a transition effect */
+}
+
+.admin-profile:hover {
+  transform: scale(1.02); /* Slightly scale up the profile on hover */
+}
+
+.admin-profile-content {
+  display: flex;
+  flex-direction: row;
+  transition: opacity 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px;
+  padding: 20px;
+  
+  border-radius: 8px;
+
+}
+
+.admin-profile-content:hover {
+  opacity: 0.95; /* Slightly reduce opacity on hover */
+}
+
+.admin-left-section {
+  flex: 3;
+  margin-right: 70px;
+  animation: slideInLeft 1s ease-in-out; /* Slide in animation */
+}
+
+.admin-right-section {
+  margin-left: 70px; 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideInRight 1s ease-in-out; /* Slide in animation */
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.admin-profile-section {
+  color: white;
+ margin-top: 30px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+
+
+.admin-profile-section h2 {
+
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.admin-profile-section p,
+.admin-profile-section input {
+  color:white;
+  margin: 5px 0;
+}
+
+.admin-profile-image img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.admin-profile-image img:hover {
+  transform: scale(1.1); /* Scale up image on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.admin-profile-section ul {
+  padding: 0;
+  list-style: none;
+  
+}
+
+.admin-profile-section ul li {
+  margin: 5px 0;
+}
+
+.admin-profile-section ul li a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.admin-profile-section ul li a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Change link color on hover */
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.color{
+  font-size: 20px;
+  align-items: center;
+
+}
+ 
+
+.admin-profile-button{
+  color: #ccc;
+ width: 15%;
+ font-size: 20px;
+ background-color: #007bff;
+ border: none;
+  
+  
+}
+
+.edit-button1:hover, .admin-profile-button:hover {
+   /* Change button color on hover */
+  transform: scale(1.05); /* Slightly scale up button on hover */
+}
+.admin-profile-info{
+  color: #ccc;
+  margin-left:00px;
+}
+

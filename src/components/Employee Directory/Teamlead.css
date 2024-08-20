@@ -1,0 +1,140 @@
+.team-container1 {
+  width: 55%;
+  margin-left: 170px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(19, 18, 18, 0.87);
+  border-radius: 8px;
+  background-color: rgb(7, 10, 92);
+  position: relative;
+}
+
+.team-title {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: 0%;
+}
+
+.team-leaders-list1 {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  max-height: 400px;
+  overflow-y: hidden;
+  border-radius: 8px;
+}
+
+.team-leader-box1 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+  width: 300px;
+  margin: 5px 0;
+  position: relative;
+}
+
+.team-leader-box1:hover {
+  transform: scale(1.05);
+}
+
+.profile-image1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.team-leader-info1 {
+  text-align: left;
+}
+
+.team-leader-info1 p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.add-team-leader-form1 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  z-index: 10; /* Ensure the form is on top */
+}
+
+.add-team-leader-form1 h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.add-team-leader-form1 input {
+  width: calc(100% - 22px);
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-team-leader-form1 button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-team-leader-form1 button:hover {
+  background-color: #218838;
+}
+
+
+
+
+.add-button1 {
+  width: 25%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 0%;
+}
+
+.back-button1 {
+  width: 25%;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 35%;
+}
+
+.add-button1:hover, .back-button1:hover {
+  background-color: #0056b3;
+}
+
+.back-button1:hover {
+  background-color: #5a6268;
+}
