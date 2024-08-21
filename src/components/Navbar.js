@@ -7,7 +7,9 @@ import { FaHandsHelping, FaPrescription } from "react-icons/fa";
 import { IoSettings } from "react-icons/io5";
 import logoImage from "../assets/S.jpg"; // Your logo image
 import profileImage from "../assets/profile.png"; // Your profile image
-const NavBar = ({ onButtonClick }) => {
+import homeButton from "../assets/homeButton.png";
+
+const NavBar = ({ onButtonClick, onHomeClick }) => {
   const [dropdownVisible, setDropdownVisible] = useState({
     profile: false,
     ticket: false,
@@ -16,6 +18,7 @@ const NavBar = ({ onButtonClick }) => {
     training: false,
     attendance: false,
   });
+
   const dropdownRefs = {
     profile: useRef(null),
     ticket: useRef(null),
@@ -24,6 +27,7 @@ const NavBar = ({ onButtonClick }) => {
     training: useRef(null),
     attendance: useRef(null),
   };
+
   const toggleDropdown = (type) => {
     setDropdownVisible(prev => ({
       ...prev,
@@ -34,6 +38,7 @@ const NavBar = ({ onButtonClick }) => {
       }, {}),
     }));
   };
+
   const handleOutsideClick = (event) => {
     Object.keys(dropdownRefs).forEach(key => {
       if (dropdownVisible[key] && dropdownRefs[key].current && !dropdownRefs[key].current.contains(event.target)) {
@@ -41,17 +46,27 @@ const NavBar = ({ onButtonClick }) => {
       }
     });
   };
+
   useEffect(() => {
     document.addEventListener('click', handleOutsideClick);
     return () => {
       document.removeEventListener('click', handleOutsideClick);
     };
   }, [dropdownVisible]);
+
   return (
     <nav className="navBar">
       <div className="navBar-logoContainer">
         <img src={logoImage} alt="Logo" className='navBar-logo' />
       </div>
+      
+      {/* Home Button */}
+      <div className="navBar-homeButtonContainer">
+        <button className="navBar-homeButton" onClick={onHomeClick}>
+          <img src={homeButton} alt="Home" className="navBar-homeButtonImage" />
+        </button>
+      </div>
+
       <div className='navBar-nav'>
         {/* Team Dropdown */}
         <div className="navBar-dropdownToggle" onClick={() => toggleDropdown('team')} ref={dropdownRefs.team}>
@@ -119,4 +134,5 @@ const NavBar = ({ onButtonClick }) => {
     </nav>
   );
 };
+
 export default NavBar;

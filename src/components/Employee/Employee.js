@@ -23,13 +23,17 @@ const Employee = () => {
     setSelectedComponent(componentName);
   };
 
+  const handleHomeClick = () => {
+    setSelectedComponent(null); // Reset to home state
+  };
+
   const addTicket = (ticket) => {
     setTickets([...tickets, ticket]);
   };
 
   return (
     <main>
-      <EmployeeNavBar onButtonClick={handleButtonClick} />
+      <EmployeeNavBar onButtonClick={handleButtonClick} onHomeClick={handleHomeClick} />
       <ImageSlider />
       <div className="employee-page">
         <Employeesidebar onButtonClick={handleButtonClick} />

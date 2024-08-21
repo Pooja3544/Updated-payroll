@@ -27,6 +27,40 @@ body {
   border: 2px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.employee-navbar__home-button-container {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; 
+}
+
+.employee-navbar__home-button {
+  background: none; /* Remove any background */
+  padding: 0; /* Remove any padding */
+  border: none; /* Remove any border */
+  cursor: pointer; /* Make it clickable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employee-navbar__home-button-image {
+  width: 50px; /* Adjust the size of your home button image */
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.employee-navbar__home-button:hover .employee-navbar__home-button-image {
+  background-color: #45a049; /* Darker green on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.employee-navbar__home-button:active .employee-navbar__home-button-image {
+  background-color: #3e8e41; /* Even darker green on click */
+  transform: scale(0.98); /* Slightly shrink on click */
+}
+
 
 .employee-navbar__nav {
   display: flex;

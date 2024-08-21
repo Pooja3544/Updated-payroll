@@ -7,8 +7,9 @@ import { FaHandsHelping, FaPrescription } from "react-icons/fa";
 import { IoSettings } from "react-icons/io5";
 import img1 from "../../assets/S.jpg"; // Your logo image
 import img2 from "../../assets/profile.png"; // Your profile image
+import homeButton from "../../assets/homeButton.png"; 
 
-const EmployeeNavBar = ({ onButtonClick }) => {
+const EmployeeNavBar = ({ onButtonClick, onHomeClick }) => {
   const [dropdownVisible, setDropdownVisible] = useState({
     profile: false,
     ticket: false,
@@ -49,6 +50,12 @@ const EmployeeNavBar = ({ onButtonClick }) => {
     <nav className="employee-navbar">
       <div className="employee-navbar__logo-container">
         <img src={img1} alt="Logo" className='employee-navbar__logo' />
+      </div>
+
+      <div className="employee-navbar__home-button-container">
+        <button className="employee-navbar__home-button" onClick={onHomeClick}>
+          <img src={homeButton} alt="Home" className="employee-navbar__home-button-image" />
+        </button>
       </div>
 
       <div className='employee-navbar__nav'>

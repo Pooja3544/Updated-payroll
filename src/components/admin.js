@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './admin.css';
 import NavBar from './Navbar';
 import SideBar from './sidebar';
@@ -38,6 +39,14 @@ const Admin = () => {
     }
   };
 
+  const handleHomeClick = () => {
+    setSelectedComponent(null);
+    setSelectedProjectId(null);
+    setSelectedMemberId(null);
+    setSelectedEmployee(null);
+    setSelectedTeam(null);
+  };
+
   const handleProjectSelect = (projectId) => {
     setSelectedProjectId(projectId);
     setSelectedComponent('projectdetails');
@@ -52,6 +61,7 @@ const Admin = () => {
     setSelectedEmployee(employee);
     setSelectedComponent('taskdetails');
   };
+  
   const employees = [
     {
         company: 'Sq',
@@ -113,7 +123,7 @@ const Admin = () => {
 
   return (
     <main>
-      <NavBar onButtonClick={handleButtonClick} />
+      <NavBar onButtonClick={handleButtonClick} onHomeClick={handleHomeClick}/>
       <ImageSlider />
       <div className="home-page">
         <SideBar onButtonClick={handleButtonClick} />

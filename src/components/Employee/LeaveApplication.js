@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLeave } from '../../contexts/LeaveContext';
 import './leave.css';
+import axios from 'axios'; 
 
 const LeaveApplication = () => {
   const { addLeaveRequest } = useLeave();
@@ -41,7 +42,7 @@ const LeaveApplication = () => {
     return Math.ceil(differenceInTime / (1000 * 3600 * 24)) + 1;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  async (e) => {
     e.preventDefault();
     const leaveDays = calculateLeaveDays(formData.leaveFromDate, formData.leaveToDate);
 
@@ -64,6 +65,20 @@ const LeaveApplication = () => {
         ...prevLeaves,
         casual: prevLeaves.casual - leaveDays,
       }));
+    }
+    try {
+      // Send email to the manager
+      await axios.post('http://localhost:5000/send-leave-request', {
+        email: 'pooja.vm9671@gmail.com', // Replace with the actual manager's email
+        leaveType: formData.leaveType,
+        leaveFromDate: formData.leaveFromDate,
+        leaveToDate: formData.leaveToDate,
+        reason: formData.reason,
+      });
+      alert('Leave request submitted and email sent to the manager.');
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Error submitting leave request. Please try again later.');
     }
 
     setFormData({
